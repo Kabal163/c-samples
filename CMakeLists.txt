@@ -13,3 +13,8 @@ target_compile_definitions(lat_ctxswtch PRIVATE $<$<CONFIG:Debug>:DEBUG>)
 
 add_executable(sqrt sqrt.c ${SHARED_SRCS})
 target_compile_definitions(sqrt PRIVATE $<$<CONFIG:Debug>:DEBUG>)
+
+add_executable(fancy_str fancy_str.c ${SHARED_SRCS})
+target_compile_definitions(fancy_str PRIVATE $<$<CONFIG:Debug>:DEBUG>)
+target_compile_options(fancy_str PRIVATE -fsanitize=address -g)
+target_link_options(fancy_str PRIVATE -fsanitize=address)
