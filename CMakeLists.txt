@@ -10,3 +10,6 @@ target_compile_definitions(lat_syscall PRIVATE $<$<CONFIG:Debug>:DEBUG>)
 
 add_executable(lat_ctxswtch lat_ctxswtch.c ${SHARED_SRCS})
 target_compile_definitions(lat_ctxswtch PRIVATE $<$<CONFIG:Debug>:DEBUG>)
+
+add_executable(sqrt sqrt.c ${SHARED_SRCS})
+target_compile_definitions(sqrt PRIVATE $<$<CONFIG:Debug>:DEBUG>)
