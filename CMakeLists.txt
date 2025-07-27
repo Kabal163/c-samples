@@ -18,3 +18,8 @@ add_executable(fancy_str fancy_str.c ${SHARED_SRCS})
 target_compile_definitions(fancy_str PRIVATE $<$<CONFIG:Debug>:DEBUG>)
 target_compile_options(fancy_str PRIVATE -fsanitize=address -g)
 target_link_options(fancy_str PRIVATE -fsanitize=address)
+
+add_executable(mussad mussad.c ${SHARED_SRCS})
+target_compile_definitions(mussad PRIVATE $<$<CONFIG:Debug>:DEBUG>)
+target_compile_options(mussad PRIVATE -fsanitize=address -g)
+target_link_options(mussad PRIVATE -fsanitize=address)
