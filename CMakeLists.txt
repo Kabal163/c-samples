@@ -23,3 +23,8 @@ add_executable(mussad mussad.c ${SHARED_SRCS})
 target_compile_definitions(mussad PRIVATE $<$<CONFIG:Debug>:DEBUG>)
 target_compile_options(mussad PRIVATE -fsanitize=address -g)
 target_link_options(mussad PRIVATE -fsanitize=address)
+
+add_executable(hv_count hv_count.c ${SHARED_SRCS})
+target_compile_definitions(hv_count PRIVATE $<$<CONFIG:Debug>:DEBUG>)
+target_compile_options(hv_count PRIVATE -fsanitize=address -g)
+target_link_options(hv_count PRIVATE -fsanitize=address)
