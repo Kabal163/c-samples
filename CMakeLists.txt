@@ -28,3 +28,8 @@ add_executable(hv_count hv_count.c ${SHARED_SRCS})
 target_compile_definitions(hv_count PRIVATE $<$<CONFIG:Debug>:DEBUG>)
 target_compile_options(hv_count PRIVATE -fsanitize=address -g)
 target_link_options(hv_count PRIVATE -fsanitize=address)
+
+add_executable(mos_count mos_count.c ${SHARED_SRCS})
+target_compile_definitions(mos_count PRIVATE $<$<CONFIG:Debug>:DEBUG>)
+target_compile_options(mos_count PRIVATE -fsanitize=address -g)
+target_link_options(mos_count PRIVATE -fsanitize=address)
