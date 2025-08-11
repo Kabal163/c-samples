@@ -38,3 +38,6 @@ add_executable(fruits_into_baskets fruits_into_baskets.c)
 target_compile_definitions(fruits_into_baskets PRIVATE $<$<CONFIG:Debug>:DEBUG>)
 #target_compile_options(fruits_into_baskets PRIVATE -fsanitize=address -g)
 #target_link_options(fruits_into_baskets PRIVATE -fsanitize=address)
+
+add_executable(9999 9999.c)
+target_compile_definitions(9999 PRIVATE $<$<CONFIG:Debug>:DEBUG>)
